@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Biglietto_Treno_Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <link rel="stylesheet" href="style.css">
+  <body>
+
+    <div class="wrapper">
+      <h1 class ="title">Calcola il prezzo del tuo biglietto</h1>
+
+
+<!-- Users Data -->
+
+      <section class="dati-imput">
+
+        <div class="row">
+
+          <div class="col">
+            <label for="nome">Nome&Cognome</label>
+
+            <input type="text"
+            id="nome"
+            name="nome"
+            placeholder="inserisci il tuo nome"
+            >
+          </div>
+
+          <div class="col">
+            <label for="km">Km da percorrere</label>
+
+            <input type="number"
+            id="km"
+            name="km"
+            placeholder="inserisci km"
+            >
+          </div>
+
+          <div class="col">
+            <label for="fascia-età">Fascia di età</label>
+            <select name="fascia-età" id="fascia-età">
+              <option value="maggiorenne">maggiorenne</option>
+              <option value="minorenne">minorenne</option>
+              <option value="over-65">over-65</option>
+            </select>
+
+          </div>
+
+        </div>
+
+        <!-- DUE BOTTONI:
+        1. PER GENERARE IL Biglietto
+        2. NASCONDERE la Tabella e fare un reset -->
+
+        <div class="actions">
+          <button id="bottoneGenera" class="btn">Genera Biglietto</button>
+          <button id="bottoneAnnulla" class="btn">Annulla Biglietto</button>
+        </div>
+      </section>
+
+
+
+
+            <!-- Biglietto Completo -->
+<section id="biglietto" class="hidden">
+  <h2 class="title">il tuo biglietto</h2>
+
+  <div class="contenuti">
+    <div class="nome">
+      <h3>
+        Nome Passeggero:
+        <span id="nome-passeggero"></span>
+      </h3>
+    </div>
+
+                        <!-- Offerta -->
+
+<table>
+
+  <thead>
+    <tr>
+      <th>offerta</th>
+      <th>Carrozza</th>
+      <th>Codice CP</th>
+      <th>Costo</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        <span id="offerta-applicata"></span>
+      </td>
+      <td>
+        <span id="carrozza"></span>
+      </td>
+      <td>
+        <span id="codice-cp"></span>
+      </td>
+      <td>
+        <span id="costo"></span>
+      </td>
+    </tr>
+  </tbody>
+
+</table>
+
+  </div>
+
+</section>
+
+
+            <!-- JAVASCRIPT -->
+      <script src= "./js/main.js"></script>
+  </body>
+</html>
